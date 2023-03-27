@@ -19,6 +19,7 @@ theano-pymc = "*"
 tornado = "*"
 graphviz = "*"
 numpy = "==1.23.5"
+scikit-learn = "*"
 
 [dev-packages]
 
