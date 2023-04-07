@@ -4,24 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-jupyter = "*"
-jupyterlab = "*"
-seaborn = "*"
-watermark = "*"
-daft = "*"
-causalgraphicalmodels = "*"
-arviz = "*"
 pymc = "*"
-tqdm = "*"
-aeppl = "*"
-aesara = "*"
-theano-pymc = "*"
-tornado = "*"
-graphviz = "*"
-numpy = "==1.23.5"
+seaborn = "*"
+jupyter = "*"
+daft = "*"
 scikit-learn = "*"
+watermark = "*"
+graphviz = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.10"	# pymc sampling doesn't work with python 3.11 yet as of Apr 7, 2023.
