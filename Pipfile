@@ -11,6 +11,7 @@ daft = "*"
 scikit-learn = "*"
 watermark = "*"
 graphviz = "*"
+jupyterlab = "*"
 
 [dev-packages]
 
