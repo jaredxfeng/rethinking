@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "42f72be3b513e3843ffb9b2acca71f4497a8c1d53f5b8f3ff6a152a35f3c820a"
+            "sha256": "2d8f8930d80b11317e74df72aea32c23b01527793eb698e3c12c371864269bf4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -1519,6 +1519,10 @@
             ],
             "markers": "python_version >= '3.7' and python_version < '4'",
             "version": "==2.28.2"
+        },
+        "rethinking-pymc-utils": {
+            "editable": true,
+            "path": "."
         },
         "rfc3339-validator": {
             "hashes": [

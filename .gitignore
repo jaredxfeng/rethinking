@@ -1,2 +1,4 @@
 *.ipynb_checkpoints/
 *rethinking-book.pdf
+*build/
+*rethinking_utils.egg-info/
