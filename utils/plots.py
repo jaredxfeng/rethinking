@@ -2,11 +2,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import arviz as az
 from daft import PGM
+from utils.analysis import Prefs
 
 
 def init():
     az.style.use("arviz-doc")
-    az.rcParams["stats.hdi_prob"] = 0.89
+    az.rcParams["stats.hdi_prob"] = Prefs.hdi_width
     plt.rcParams["figure.dpi"] = 125
     plt.rcParams["axes.titleweight"] = "light"
     plt.rcParams["font.size"] = 10

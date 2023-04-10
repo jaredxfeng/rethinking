@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2d8f8930d80b11317e74df72aea32c23b01527793eb698e3c12c371864269bf4"
+            "sha256": "e62e9c5ca4739f1c4c7ca4d227550089a904c8c5e0531c682368839e3f1baf7f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -685,11 +685,11 @@
         },
         "jupyter-server-fileid": {
             "hashes": [
-                "sha256:1e0816d0857f490fadea11348570f0cba03f70f315c9842225aecfa45882b6af",
-                "sha256:6092ef114eddccf6cba69c0f0feb612c2f476f2e9467828809edb854c18806bb"
+                "sha256:171538b7c7d08d11dbc57d4e6da196e0c258e4c2cd29249ef1e032bb423677f8",
+                "sha256:5b489c6fe6783c41174a728c7b81099608518387e53c3d53451a67f46a0cb7b0"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==0.8.0"
+            "version": "==0.9.0"
         },
         "jupyter-server-terminals": {
             "hashes": [
@@ -1520,7 +1520,7 @@
             "markers": "python_version >= '3.7' and python_version < '4'",
             "version": "==2.28.2"
         },
-        "rethinking-pymc-utils": {
+        "rethinking-utils": {
             "editable": true,
             "path": "."
         },

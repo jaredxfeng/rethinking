@@ -1,5 +1,4 @@
 from . import plots
-from . import stats
 from . import warnings
 
 

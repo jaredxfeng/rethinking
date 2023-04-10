@@ -12,7 +12,7 @@ scikit-learn = "*"
 watermark = "*"
 graphviz = "*"
 jupyterlab = "*"
-rethinking-pymc-utils = {editable = true, path = "."}
+rethinking-utils = {editable = true, path = "."}
 
 [dev-packages]
 
