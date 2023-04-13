@@ -1,7 +1,8 @@
 # assign r::stats function names to scipy.stats functions
 
 from scipy.stats import binom, uniform, norm
-
+import autograd.numpy as np
+from autograd.numpy import pi, sqrt, exp
 
 # rvs
 def rbinom(size, n, p): 
@@ -20,6 +21,14 @@ def dnorm(x, loc=0, scale=1, log=False):
 def dunif(x, lower=0, upper=1, log=False): 
     return uniform.pdf(x, lower, upper - lower) if not log else uniform.logpdf(x, lower, upper - lower)
 
+# autograd compatible pdfs and pmfs
+def dnorm_(x, loc=0, scale=1, log=False):
+    res = (1/sqrt(2*pi)/scale) * exp(-(x - loc)**2/2/scale**2)
+    return res if not log else np.log(res)
+    
+def dunif_(x, lower=0, upper=1, log=False):
+    res = 1/(upper - lower)
+    return res if not log else np.log(res)
 
 # cdfs
 # def pnorm

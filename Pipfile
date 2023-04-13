@@ -13,6 +13,7 @@ watermark = "*"
 graphviz = "*"
 jupyterlab = "*"
 rethinking-utils = {editable = true, path = "."}
+autograd = "*"
 
 [dev-packages]
 
