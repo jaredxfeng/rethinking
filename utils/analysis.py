@@ -2,6 +2,7 @@ import pandas as pd
 import xarray as xr
 import arviz as az
 from typing import List, Optional
+import numpy as np
 
 
 class Prefs:
@@ -28,3 +29,11 @@ def precis(data, pars: Optional[List[str]]=None, round_to=Prefs.round_to):
         return des.rename({f"hdi_{Prefs.hdi_lower_perc}": Prefs.hdi_lower_perc, 
                            f"hdi_{Prefs.hdi_upper_perc}": Prefs.hdi_upper_perc}, 
                           axis=1)
+    
+    
+def cov2cor(covariance):
+    v = np.sqrt(np.diag(covariance))
+    outer_v = np.outer(v, v)
+    correlation = covariance / outer_v
+    correlation[covariance == 0] = 0
+    return correlation
