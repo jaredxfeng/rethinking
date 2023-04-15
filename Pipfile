@@ -14,6 +14,8 @@ graphviz = "*"
 jupyterlab = "*"
 rethinking-utils = {editable = true, path = "."}
 autograd = "*"
+numpyro = "*"
+jax = "==0.4.7"
 
 [dev-packages]
 

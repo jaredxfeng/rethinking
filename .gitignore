@@ -1,5 +1,5 @@
 *.ipynb_checkpoints/
 *build/
 *rethinking_utils.egg-info/
-
+*pyproject.toml
 *rethinking-book.pdf
