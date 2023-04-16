@@ -34,6 +34,6 @@ def precis(data, pars: Optional[List[str]]=None, round_to=Prefs.round_to):
 def cov2cor(covariance):
     v = np.sqrt(np.diag(covariance))
     outer_v = np.outer(v, v)
-    correlation = covariance / outer_v
-    correlation[covariance == 0] = 0
+    correlation = np.array(covariance / outer_v)
+    correlation[covariance == 0.] = 0.
     return correlation
