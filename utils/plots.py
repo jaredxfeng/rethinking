@@ -12,8 +12,10 @@ def init():
     
     plt.rcParams["axes.titleweight"] = "light"
     plt.rcParams["figure.dpi"] = 150
-    plt.rcParams["figure.figsize"] = (10, 4)
+    plt.rcParams["figure.figsize"] = (11, 3.5)
     plt.rcParams["figure.labelsize"] = 10
+    plt.rcParams["figure.subplot.top"] = 1
+    plt.rcParams["figure.subplot.bottom"] = 0.05
     plt.rcParams["figure.titlesize"] = 10
     plt.rcParams["font.size"] = 10
     plt.rcParams["legend.fontsize"] = 10
@@ -38,5 +40,5 @@ def scatter(x, y, ax, s=None, alpha=0.5):
     return ax.scatter(x, y, edgecolor="C0", color="w", alpha=alpha, s=s)
 
 
-def shade(x, sample_ys, ax, color="C3"):
-    return az.plot_hdi(x, sample_ys, ax=ax, color=color, fill_kwargs={"alpha": 0.2})
+def shade(x, sample_ys, ax, color="C3", alpha=0.4):
+    return az.plot_hdi(x, sample_ys, ax=ax, color=color, fill_kwargs={"alpha": alpha})
