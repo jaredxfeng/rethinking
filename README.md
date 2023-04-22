@@ -12,5 +12,15 @@ I am rolling out the jupyter notebooks chapter by chapter, with an aim for compl
 # Goodnotes
 And here are some [goodnotes](https://web.goodnotes.com/s/8ERStxgngckNf2VWF4FujP#page-1) I have been taking when listening to the 2023 lectures. Again I skipped the first few chapters there, and they tend to be way ahead of the jupyter notebooks.
 
-# Fancy title page from the 2023 course
-<img src="title.gif" width="500">
+# Numpyro dependencies
+Before installing Numpyro and its dependencies, you should install all `Pipfile` dependencies by doing `pipenv install` in the repo root, immediately after cloning this repo.
+
+If you plan to use CPU, you are recommended to do `pipenv install numpyro` directly. That way, jax and jaxlib (cpu versions) would be automatically installed as well, but might run into compatibility issues between jax and jaxlib, and you will need to resolve those by manually upgrading jax and/or jaxlib.
+
+If you plan to use GPU, you cannot use `pipenv` commands anymore, because it cannot parse `pip install` options such as `--upgrade` or `-f` which are necessary for installing GPU versions of jax. You could either (1) install CUDA, install cuDNN, and finally do `pip install` in your activated venv per jax's official guide, or (2) install the jax and jaxlib bundled with CUDA and cuDNN. Please refer to [jax repo's readme](https://github.com/google/jax) for a complete guide. After completing either steps, you can install Numpyro. 
+
+Final notes for GPU users: 
+- If you are a regular PyTorch user, note that PyTorch automatically bundles CUDA and cuDNN. But that's not what jax always does, and you might have to install CUDA and cuDNN separately.
+- Upgrading your NVIDIA driver to the latest version is recommended before installing CUDA and cuDNN. Or you will have to carefully select CUDA and cuDNN versions according to your current NVIDIA driver version. Please consult NVIDIA's official documentations.
+- If you are a experienced jax user and you have your own approach to build things up, you might as well ignore instructions here.
+

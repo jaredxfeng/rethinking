@@ -37,8 +37,8 @@ def init_dag():
 
 
 def scatter(x, y, ax, s=None, alpha=0.5):
-    return ax.scatter(x, y, edgecolor="C0", color="w", alpha=alpha, s=s)
+    ax.scatter(x, y, edgecolor="C0", color="w", alpha=alpha, s=s)
 
 
-def shade(x, sample_ys, ax, color="C3", alpha=0.4):
-    return az.plot_hdi(x, sample_ys, ax=ax, color=color, fill_kwargs={"alpha": alpha})
+def shade(x, y_PI, ax, color="C3", alpha=0.4):
+    ax.fill_between(x, y_PI[0], y_PI[1], color=color, alpha=alpha)

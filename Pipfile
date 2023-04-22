@@ -13,9 +13,8 @@ watermark = "*"
 graphviz = "*"
 jupyterlab = "*"
 rethinking-utils = {editable = true, path = "."}
+pip = "*"
 autograd = "*"
-numpyro = "*"
-jax = "==0.4.7"
 
 [dev-packages]
 
