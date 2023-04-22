@@ -22,5 +22,5 @@ If you plan to use GPU, you cannot use `pipenv` commands anymore, because it can
 Final notes for GPU users: 
 - If you are a regular PyTorch user, note that PyTorch automatically bundles CUDA and cuDNN. But that's not what jax always does, and you might have to install CUDA and cuDNN separately.
 - Upgrading your NVIDIA driver to the latest version is recommended before installing CUDA and cuDNN. Or you will have to carefully select CUDA and cuDNN versions according to your current NVIDIA driver version. Please consult NVIDIA's official documentations.
-- If you are a experienced jax user and you have your own approach to build things up, you might as well ignore instructions here.
+- If you are an experienced jax user and you have your own approach to build things up, you might as well ignore instructions here.
 
