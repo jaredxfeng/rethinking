@@ -5,8 +5,11 @@ import autograd.numpy as np
 from autograd.numpy import pi, sqrt, exp
 
 # rvs
+def rbern(size=1, p=0.5):
+    return binom.rvs(1, p, size=size)
+
 def rbinom(size=1, n=10, p=0.5): 
-    return binom.rvs(n, p, size)
+    return binom.rvs(n, p, size=size)
 
 def rlnorm(size=1, mu=0, sigma=1):
     return lognorm.rvs(scale=exp(mu), s=sigma, size=size)
