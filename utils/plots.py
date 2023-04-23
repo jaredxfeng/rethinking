@@ -36,9 +36,14 @@ def init_dag():
     return PGM(dpi=125, observed_style="inner", alternate_style="shaded")
 
 
-def scatter(x, y, ax, s=None, alpha=0.5):
-    ax.scatter(x, y, edgecolor="C0", color="w", alpha=alpha, s=s)
+def scatter(x, y, alpha=.7, c="C0", **args):
+    plt.plot(x, y, c=c, alpha=alpha, 
+            marker="o", fillstyle="none", linestyle="", **args)
 
 
-def shade(x, y_PI, ax, color="C3", alpha=0.4):
-    ax.fill_between(x, y_PI[0], y_PI[1], color=color, alpha=alpha)
+def shade(x, y_PI, c="C0", **args):
+    plt.fill_between(x, y_PI[0], y_PI[1], color=c, **args)
+    
+    
+def dens(x, bw_adjust=.5, linewidth=0, fill=True, **args):
+    sns.kdeplot(x, bw_adjust=bw_adjust, linewidth=linewidth, fill=fill, **args)
