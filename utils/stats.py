@@ -3,22 +3,10 @@
 from scipy.stats import binom, uniform, norm, lognorm
 import autograd.numpy as np
 from autograd.numpy import pi, sqrt, exp
+import numpyro.distributions as dist
+from jax import random
 
-# rvs
-def rbern(size=1, p=0.5):
-    return binom.rvs(1, p, size=size)
-
-def rbinom(size=1, n=10, p=0.5): 
-    return binom.rvs(n, p, size=size)
-
-def rlnorm(size=1, mu=0, sigma=1):
-    return lognorm.rvs(scale=exp(mu), s=sigma, size=size)
-
-def rnorm(size=1, mu=0, sigma=1): 
-    return norm.rvs(mu, sigma, size)
-
-def runif(size=1, l=0, u=1): 
-    return uniform.rvs(loc=l, scale=u - l, size=size)
+seed = random.PRNGKey(0)
 
 
 # pdfs and pmfs

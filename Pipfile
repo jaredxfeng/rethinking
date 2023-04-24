@@ -15,6 +15,7 @@ jupyterlab = "*"
 rethinking-utils = {editable = true, path = "."}
 pip = "*"
 autograd = "*"
+statsmodels = "*"
 
 [dev-packages]
 

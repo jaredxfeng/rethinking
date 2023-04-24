@@ -3,6 +3,7 @@ import seaborn as sns
 import arviz as az
 from daft import PGM
 from utils.analysis import Prefs
+import numpy as np
 
 
 def init():
@@ -47,3 +48,9 @@ def shade(x, y_PI, c="C0", **args):
     
 def dens(x, bw_adjust=.5, linewidth=0, fill=True, **args):
     sns.kdeplot(x, bw_adjust=bw_adjust, linewidth=linewidth, fill=fill, **args)
+    
+    
+def abline_lm(x, y, ax, c="k", **args):
+    b, a = np.polyfit(x, y, deg=1)
+    x1, x2 = ax.get_xlim()
+    ax.plot([x1, x2], [a + b*x1, a + b*x2], c=c, **args)
